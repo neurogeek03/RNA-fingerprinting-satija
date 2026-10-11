@@ -20,7 +20,9 @@ cluster holding the Perturb-seq data + more compute.
   `results.R` (map nominations back + join DE).
 - `pipeline/` — `00a_preprocess_perturbseq.py` → `00b_build_dictionary.R` → `01_prepare_query.py`
   → `02_fingerprint.R` → `03_annotate_results.R`.
-- `docker/` — Docker only (`Dockerfile`, R stack). `environment.yml` (conda/Python) lives at the repo root.
+- `docker/` — Docker only (`Dockerfile`, R stack).
+- Python steps (`00a`, `01`) run in the existing `brisc` conda env
+  (`/scratch/mfafouti/miniforge3/envs/brisc`, has brisc+ryp+anndata) plus `gprofiler-official`.
 
 ## Key facts (verified)
 - **Query (rat):** `/scratch/mfafouti/Mommybrain-PPD/Slide_tags/EdgeR/data/DE_after_mt_filter_108123_...h5ad`
