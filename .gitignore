@@ -1,0 +1,14 @@
+# Pipeline outputs: cached dictionaries, converted objects, result tables.
+results/
+
+# Large staged data should never be committed.
+*.h5ad
+*.rds
+*.sif
+
+# Python / R cruft.
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
